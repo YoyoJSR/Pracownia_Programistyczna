@@ -130,5 +130,62 @@
    printf("x2: %.2f",x2);
     */
 
+    //Zadanie 8
+    /*
+    int liczba1,liczba2;
+    printf("podaj 1 liczbe:");
+    scanf("%d",&liczba1);
+    printf("podaj 2 liczbe:");
+    scanf("%d",&liczba2);
+    (liczba1 > liczba2) ? printf("liczba1 jest wieksza od 2 czyli %d > %d\n",liczba1,liczba2):printf("liczba2: %d jest wieksza od liczby1: %d",liczba2,liczba1);
+    */
+    //Zadanie 9
+    /*
+    int liczba1,liczba2,liczba3;
+    printf("podaj 1 liczbe:");
+    scanf("%d",&liczba1);
+    printf("podaj 2 liczbe:");
+    scanf("%d",&liczba2);
+    printf("podaj 3 liczbe:");
+    scanf("%d",&liczba3);
+    (liczba1>liczba2 && liczba1 > liczba3) ? printf("najwieksza liczba to liczba1: %d",liczba1)
+    :(liczba2 > liczba1 && liczba2 >liczba3) ? printf("najwieksza liczba to liczba2: %d",liczba2)
+    :printf("najwieszka liczba to liczba3: %d",liczba3); 
+    */
+
+    //Zadanie 10
+    /*
+    int liczba;
+    printf("podaj liczbe: ");
+    scanf("%d",&liczba);
+    (liczba%2==0)?printf("liczba parzysta"):printf("liczba nieparzysta");
+    */
+
+    //Zadanie 11
+    /*
+    float liczba1,liczba2;
+    printf("podaj liczbe: ");
+    scanf("%f",&liczba1);
+    printf("podaj liczbe 2: ");
+    scanf("%f",&liczba2);
+    (liczba1>liczba2)?printf("Liczba1: %.2f jest wieksza",liczba1):(liczba2>liczba1)?printf("liczba2: %.2f jest wieksza",liczba2):printf("liczby sa rowne");
+    */
+
+
+    //Zadanie 12
+    /*
+    int ocena;
+    printf("podaj ocene(0-100): ");
+    scanf("%d",&ocena);
+    (ocena>=51)?printf("zdane"):printf("niezdane");
+    */
+
+    //Zadanie 13
+    /*
+    int rok;
+    printf("sprawdz czy twoj rok jest przestepny: ");
+    scanf("%d",&rok);
+    (rok%4==0 && rok%100!=0 || rok%400==0)?printf("rok jest przestepny"):printf("rok nie jest przestepny");
     return 0;
+    */
     }
