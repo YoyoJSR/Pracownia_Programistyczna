@@ -4,59 +4,9 @@
 
 int main(void)
 {
-    int a = 1;
-    int b = 2;
-    double c = 2.5;
-    double d = 3.2;
-
-    a = a+b;
-    a+=b;
-
-    a = a-b;
-    a-=b;
-
-    int i = 0;
-    printf("%d\n",i++); // odczytaj wartosc zwiekszona o jeden
-    printf("%d\n",i);
-    printf("%d\n",++i);// zwieksz wartosc i dopiero ja odczytaj
-    printf("%d\n",i);
-
-    double s = 0.1  + 0.2;
-    printf("0.1 + 0.2 =  %.20f\n",s);
-
-
-    int x1 = 8;
-    int x2 = 3;
-    double x3 = (double)x1 / x2; //
-    printf("%lf\n",x3);
-
-
-    double z1 = 0.1 + 0.2;
-    double z2 = 0.3;
-    double epsilon = 1e-9;
-    if (fabs(z1-z2) < epsilon){
-        printf("Zgadza sie!\n");
-    }else if (fabs(z1-z2) == epsilon){
-        printf("roznica jest rowna dokladnie 0.000000");
-    }else{
-        printf("nieprawidlowy wynik!");
-    }
-    // && logiczny and
-    // || logiczny
-
-    int m = 5,n=4;
-    (m > n) ? printf("m jest wieksze od n czyli %d > %d\n",m,n):printf("n jest wieksze od m");
-
-
-    printf("\n");
-    printf("\n");
-    printf("\n");
-    printf("\n");
-
-    //Operatory artytmetyczne
+/*
 
     //Zadanie1
-
     int liczba1 = 3;
     int liczba2 = 4;
     int liczba3 = 4;
@@ -85,27 +35,63 @@ int main(void)
     //Zadanie 6
     int kwadrat2 = (pow(liczba1,2) + pow(liczba2,2) + pow(liczba3,2));
     printf("suma kwadratow 3 liczb wynosi: %d\n",kwadrat2);
+    */
+
+    //Zadanie 7
+    /*
+    int liczba1=5;
+    int liczba2 = 4;
+    int licznik = liczba1/liczba2;
+    printf("Liczba %d miesci sie w %d: %d razy",liczba2,liczba1,licznik);
+    */
+
+    //Zadanie 8
+    /*
+    int liczba1 = 6;
+    int liczba2 = 8;
+    int roznica = pow(liczba1,2) - pow(liczba2,2);
+    printf("Wynik: %d",roznica);
+    */
+
+    //Zadanie 9
+    /*
+    int liczba1 = 10;
+    int liczba2 = 5;
+    int suma = liczba1+liczba2;
+    int roznica = liczba1-liczba2;
+    int iloraz = suma/roznica;
+    printf("wynik: %d",iloraz);
+    */
 
 
+    //Zadanie 10
+    /*
+    int liczba1=2;
+    int liczba2=liczba1 +1;
+    int liczba3=liczba2+1;
+    printf("Suma liczb: %d",liczba1+liczba2+liczba3);
+    */
 
-    // Instrukcje warunkowe
-    int cyfra1;
-    printf("podaj liczbe: \n");
-    scanf("%d",&cyfra1);
-    if (cyfra1 < 0){
-        printf("liczba jest dodatnia");
-    }
-    else if (cyfra1 = 0){
-        printf("liczba jest rowna 0");
-    }
-    else{
-        printf("liczba jest ujemna");
-    }
+    //Zadanie 11
+    /*
+    float liczba1 = 3;
+    float liczba2 = 7;
+    float liczba3 = 31;
+    float srednia = (liczba1+liczba2+liczba3)/3;
+    printf("srednia arytmetyczna wynosi: %.2f",srednia);
+    */
 
+    //Zadanie 12
+    /*
+    float a = 2;
+    float b = 3;
+    float c = 4;
+    float wzor = 1/(1/a+1/b+1/c); 
+    printf("wynik: %.2f",wzor);
+    */
 
-
-
-
+    //Zadanie 13
 
     return 0;
 }
+
