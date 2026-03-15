@@ -74,6 +74,26 @@ int main()
     }
     */
 
+//Zadanie 10
+    int n;
+    printf("podaj liczbe: ");
+    scanf("%d",&n);
+
+    printf("dzielniki liczby n: ");
+    for(int i =2;i <=n/2;i++){
+        if (n%i==0){
+            printf("%d, ",i);
+        }
+    }
+
+
+
+
+
+
+
+    
+
 
     return 0;
 }
