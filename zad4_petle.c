@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 
 int main()
 {
@@ -32,7 +33,7 @@ int main()
     int dodatnie=0,ujemne=0;
 
     do{
-        printf("podaj liczbe: ");
+        printf("podaj liczbe (press 0 to quit): ");
         scanf("%d",&n);
         if (n>0){
             dodatnie+=n;
@@ -42,7 +43,7 @@ int main()
             printf("dodano liczbe dodatnia! aktualna suma liczb ujemnych: %d\n",ujemne);
         }
     }
-    while (n>0 || n<0);
+    while (n!=0);
     printf("suma liczb dodatnich: %d\n",dodatnie);
     printf("suma liczb ujemnych: %d\n",ujemne);
     */
@@ -73,8 +74,20 @@ int main()
         i++;
     }
     */
+    //Zadanie 6
+    /*
+    float liczba;
+    printf("podaj liczbe: ");
+    scanf("%f",&liczba);
+    while(liczba!=0){
+            printf("%f\n",floor(liczba*liczba));
+            liczba--;
 
-//Zadanie 10
+    }
+    */
+
+    //Zadanie 10
+    /*
     int n;
     printf("podaj liczbe: ");
     scanf("%d",&n);
@@ -85,15 +98,33 @@ int main()
             printf("%d, ",i);
         }
     }
+    */
 
+    //Zadanie 11
+    /*
+    int liczba;
+    printf("podaj liczbe: ");
+    scanf("%d",&liczba);
+    while(liczba!=0){
+        int nowe = liczba%10;
+        printf("%d, ",nowe);
+        liczba /=10;
+    }
+    */
 
-
-
-
-
-
-    
+    //Zadanie 12
+    int a = 1122,b=867;
+    int wynik;
+    while(a!=b){
+        if (a>b){
+            a-=b;
+        }else{
+            b-=a;
+        }
+    }
+    printf("najwiekszy wspolny dzielnik: %d",b);
 
 
     return 0;
+
 }
