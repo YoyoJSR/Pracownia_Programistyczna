@@ -75,6 +75,18 @@ int calculateFactorialRecursively(int n){
 
 
 
+int calculateArithmeticSequenceRecursively(int n, int d){
+    if (n==1) return 1;
+    return calculateArithmeticSequenceRecursively(n - 1, d) + d;
+}
+
+int calculateGeometricSequenceRecursively(int n, int d){
+    if (n==1) return 1;
+    return calculateGeometricSequenceRecursively(n - 1, d) *d;
+}
+
+
+
 int calculate14(int n){
         if (n==1) return 2;
         return 3*calculate14(n-1) -1;
