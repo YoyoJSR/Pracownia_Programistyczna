@@ -75,6 +75,38 @@ int calculateFactorialRecursively(int n){
 
 
 
+int calculate14(int n){
+        if (n==1) return 2;
+        return 3*calculate14(n-1) -1;
+    }
+
+int calculate13(int n){
+    if (n==1) return 1;
+    return 2* calculate13(n-1) + 3;
+}
+
+int calculate15(int n){
+    if (n==1){
+        return 1;
+    }else if (n==2)
+    {
+        return 2;
+    }
+    return calculate15(n-1) + 2*calculate15(n-2);
+}
+
+int calculate16(int n){
+    if (n==1){
+        return 2;
+    }else if (n==2)
+    {
+        return 3;
+    }
+    return 2* calculate16(n-1) + 3*calculate16(n-2);
+}
+
+
+
 int main() {
   //printf("wynik: %d\n", sumTwoNumbers(11, 2));
   //printf("wartosc bezwzgledna liczby wynosi: %.2f\n",calculateAbsoluteValue(-5));
