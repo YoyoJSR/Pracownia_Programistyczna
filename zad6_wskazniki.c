@@ -37,13 +37,36 @@ int *initInts(){
     tablica[0] = 5;
     tablica[1] = -12;
     tablica[2] = 33;
-    return *tablica[1];
+    return tablica[1];
 }
 
 
 
+//zad 8
+void sumToPtr(const int *a, const int *b, int *c){
+     *c = *a + *b;
+}
 
 
+//zad 9
+void sqrCopy(const int *a, int *b){
+    *b = *a * *a;
+}
+
+//zad 12
+
+float  linFuncVal(const float *a, float *const b, const float *x){
+    return (*a) * (*x) + (*b);
+}
+
+
+
+//zad 16
+void swap(int *ptr1, int  *ptr2){
+    int t = *ptr1;
+    *ptr1 = *ptr2;
+    *ptr2 = t;
+}
 
 int main ()
 {
@@ -59,7 +82,7 @@ int main ()
    printf("x: %d w: %d",x,w);
 */
     //Zad 4
-
+    /*
     double a = 13.2;
     const double b = 7.7;
 
@@ -70,9 +93,36 @@ int main ()
     printf("wsk2: %.2f\n",*wsk2);
     printf("najwieksza wartosc: %.2f", findMax(wsk1,wsk2));
 
-
     //zad 5
     int *a = initInts();
     printf("%d\n", *a);
+    */
+
+    //Zad 8
+    /*
+    int a =10,b=20,c=0;
+    sumToPtr(&a,&b,&c);
+    printf("suma a i b wynosi: %d\n",c);
+    */
+
+    //Zad 9
+    /*
+    int a = 8,b=0;
+    sqrCopy(&a,&b);
+    printf("kwadrat liczby %d: %d\n",a,b);
+    */
+
+    //zad 12
+    /*
+    const float a= 10.1;
+    float b = 9.8,x=1.7;
+    printf("wynik: %.2f",linFuncVal(&a,&b,&x));
+    */
+    int a=10,b = 2;
+    printf("przed zamiana: a: %d, b:%d\n",a,b);
+    swap(&a,&b);
+    printf("po zamianie: a: %d, b: %d",a,b);
+
+
    return 0;
 }
