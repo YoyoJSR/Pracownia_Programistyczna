@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include <stdlib.h>
+//Zadanie 1
+int operation(int number){
+    return number +9;
+}
+
+int calculate(int (*operation)(int liczba), int number){
+    return operation(number);
+}
+
+//Zadanie 2
+
+int func(int number){
+    return number;
+}
+
+void applyFunction(int (*func)(int),int start,int end){
+    for (int i=start;i<=end;i++){
+         printf("%d\n",func(i));
+    }
+
+}
+
+//Zadanie 3
+
+
+
+
+
+int main()
+{
+    //Zadanie 1
+    //int (*wsk_operation)(int number) = operation;
+    //printf("%d\n",calculate(operation,3));
+
+
+    //Zadanie 2
+    //applyFunction(func,3,9);
+
+
+    //Zadanie 3
+    return 0;
+}
