@@ -22,7 +22,18 @@ void applyFunction(int (*func)(int),int start,int end){
 
 }
 
-//Zadanie 3
+//Zadanie 9
+
+double processor(int a, int b){
+    return (double)(a+b) / 1.5;
+
+}
+
+int processPair(int a, int b, double (*processor)(int,int)){
+
+    double wynik = processor(a,b);
+    return (int)wynik;
+}
 
 
 
@@ -39,6 +50,11 @@ int main()
     //applyFunction(func,3,9);
 
 
-    //Zadanie 3
+    //Zadanie 9
+    int a = 3;
+    int b = 4;
+
+    int wynik = processPair(a,b,processor);
+    printf("Wynik: %d", wynik);
     return 0;
 }
