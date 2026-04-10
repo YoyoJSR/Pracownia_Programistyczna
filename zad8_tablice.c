@@ -12,9 +12,18 @@ void findMaxValue(int *numbers, int size){
         }
     }
     printf("%d",max);
-
-
 }
+
+
+int sumSquares(int n,int *tab){
+    int suma = 0;
+    for (int i = 0;i<n;i++){
+        int kwadrat = tab[i] * tab[i];
+        suma += kwadrat;
+    }
+    return suma;
+}
+
 
 
 
@@ -39,6 +48,11 @@ int main()
     findMaxValue(myTab, rozmiar);
 
     printf("%.2f",average(7,myTab));
+
+
+    //Zad 3
+    int wynik = sumSquares(rozmiar,myTab);
+    printf("%d \n",wynik);
 
 
     return 0;
