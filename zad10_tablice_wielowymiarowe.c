@@ -56,6 +56,36 @@ int minColIdx(int n,int m,int tab[n][m]){
 
 }
 
+void copyMat(int n,int m,int tab[n][m],int tab2[n][m]){
+    for (int i=0; i <n;i++){
+        for (int j=0;j<m;j++){
+            tab[i][j] = tab2[i][j];
+        }
+    }
+}
+void copyArr2D(int n,int m,int **tab1,int **tab2){
+    for (int i =0;i<n;i++){
+        for (int j=0;j<m;j++){
+            *(*(tab1 + i)+j) = *(*(tab2 + i)+j);
+        }
+    }
+}
+
+void swapItems(unsigned int n,unsigned int m,int **tab1,int **tab2){
+    for (int i=0; i<n;i++){
+        for (int j =0; j<m;j++){
+            int value = *(*(tab1 + i)+j);
+            *(*(tab1 + i) + j) = *(*(tab2 + i)+j);
+            *(*(tab2 + i)+j) = value;
+
+        }
+    }
+
+
+}
+
+
+
 
 
 int main()
@@ -76,5 +106,36 @@ int main()
     //Zadanie 4
     int tab[2][3] = {{2,77,3},{6,7,1}};
     printf("najmniejsza kolumna: %d", minColIdx(2,3,tab));
+
+    /*
+    int tab1[2][3] = {{3,1,2},{2,2,2}};
+    int tab2[2][3];
+    copyMat(2,3,tab2,tab1);
+
+    for (int i=0;i<2;i++){
+        for(int j = 0;j<3;j++){
+            printf("%d",tab1[i][j]);
+        }
+        printf("\n");
+    }
+    */
+    int **tab1 = (int**)malloc(sizeof(int*) * 2);
+    tab1[0] = (int*)malloc(sizeof(int)*3);
+    tab1[1] = (int*)malloc(sizeof(int)*3);
+    tab1[0][0] = 1;
+    tab1[0][1] = 2;
+    tab1[0][2] = 3;
+    tab1[1][0] = 4;
+    tab1[1][1] = 5;
+    tab1[1][2] = 6;
+
+    swapItems(2,3,tab,tab1);
+    printf("%d\n",tab1);
+    free(tab[0]);
+    free(tab[1]);
+    free(tab);
+    
+
+    
 
 }
