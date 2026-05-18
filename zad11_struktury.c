@@ -96,6 +96,27 @@ void addPages(struct Book1 *b){
 }
 
 
+struct Laptop{
+    char model[30];
+    float price;
+};
+
+struct Laptop initLaptop(char model[30], float price){
+    struct Laptop result;
+    strcpy(result.model,model);
+    result.price = price;
+    return result;
+};
+
+void showLaptop(struct Laptop laptop){
+    printf("%s, cena: %.2f",laptop.model,laptop.price);
+}
+
+void reducePrice(struct Laptop *laptop){
+    laptop->price*=0.35;
+}
+
+
 
 
 // Stale. Przydatne do dokumentacji
@@ -188,7 +209,7 @@ int main()
 
 
     //Zadanie 8
-
+    /*
     struct Book1 *my_book = initBook("Wiedzmin",331);
     showBook(*my_book);
     addPages(my_book);
@@ -196,6 +217,11 @@ int main()
     addPages(my_book);
     addPages(my_book);
     showBook(*my_book);
+    */
+
+    struct Laptop my_laptop = initLaptop("Msi GX1000", 3599.99);
+    showLaptop(my_laptop);
+
 
     return 0;
 }
