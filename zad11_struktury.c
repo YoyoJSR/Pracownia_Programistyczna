@@ -8,7 +8,6 @@ struct Punkt2D{
 
 };
 
-
 struct Car{
     char *brand;
     char model[20];
@@ -37,6 +36,83 @@ struct Book{
     int pages;
 
 };
+
+struct Person{
+    char name[20];
+    int age;
+};
+
+
+void showPerson(struct Person p){
+    printf("%s %d", p.name,p.age);
+}
+
+
+void birthday(struct Person *p){
+    p->age++;
+};
+
+struct Person *initPerson(char *name,int age){
+    if (age<=0){
+        return NULL;
+    }
+    struct Person *p = malloc(sizeof(struct Person));
+    if (p==NULL){
+        return NULL;
+    }
+    strcpy(p->name,name);
+    p->age = age;
+    return p;
+};
+
+
+
+
+struct Book1{
+    char title[50];
+    int page_count;
+};
+
+struct Book1 *initBook(char *title, int page_count){
+    if(page_count <=0){
+        return NULL;
+    }
+    struct Book1 *b = malloc(sizeof(struct Book1));
+    if (b==NULL){
+        return NULL;
+    }
+    strcpy(b->title,title);
+    b->page_count = page_count;
+    return b;
+
+};
+
+void showBook(struct Book1 b){
+    printf("%s, %d\n",b.title,b.page_count);
+}
+
+void addPages(struct Book1 *b){
+    b->page_count +=10;
+}
+
+
+
+
+// Stale. Przydatne do dokumentacji
+enum Status{
+    PENDING,
+    PROCESSING,
+    DONE,
+    ERROR = -1,
+};
+
+union Liczba{
+    int calkowita;
+    double zmiennoprzecinkowa;
+};
+
+
+
 
 
 int main()
@@ -80,16 +156,46 @@ int main()
     struct Book books[5] = {
         {"American Psycho","Bret Easton Ellis", 1991, 901},
         {"W pustyni i w puszczy","Lionel Messi",2029,14},
-        {"Pachnidlo","Barack Obama",2201,777},
+        {"Mikolajek","Barack Obama",2201,777},
         {"Wiedzmin","Andrzej Sapkowski",1999,400},
         {"Hobbit","C s Lewis",1991,401},
     };
-
 
     for (int i =0; i<5;i++){
         printf("%s\n",books[i].title);
     };
     */
+
+    /*
+    union Liczba liczba = {};
+    liczba.calkowita = 3;
+    printf("%d \n",liczba.calkowita);
+    printf("%lf \n",liczba.zmiennoprzecinkowa);
+    liczba.zmiennoprzecinkowa = 3.14;
+    printf("%d \n",liczba.calkowita);
+    printf("%lf \n",liczba.zmiennoprzecinkowa);
+    */
+
+    //Zadanie 6
+    /*
+    struct Person *person1 = initPerson("Majkel", 72);
+    showPerson(*person1);
+    printf("\n");
+    birthday(person1);
+    showPerson(*person1);
+    */
+
+
+
+    //Zadanie 8
+
+    struct Book1 *my_book = initBook("Wiedzmin",331);
+    showBook(*my_book);
+    addPages(my_book);
+    addPages(my_book);
+    addPages(my_book);
+    addPages(my_book);
+    showBook(*my_book);
 
     return 0;
 }
